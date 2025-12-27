@@ -19,7 +19,7 @@ public class BetaGrapplingHook {
     public static final String MODID = "betagraphook";
 
     /**
-     * Basic mod init.
+     * Mod constructor. Performs basic mod init.
      */
     public BetaGrapplingHook(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for mod loading
