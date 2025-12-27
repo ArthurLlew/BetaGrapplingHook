@@ -1,0 +1,10 @@
+{
+  "itemgroup.betagraphook.graphook" : "Beta Grappling Hook",
+
+  "item.betagraphook.grapnel_head" : "Grapnel Head",
+  "item.betagraphook.grappling_hook" : "Grappling Hook",
+
+  "block.betagraphook.rope" : "Rope",
+  "block.betagraphook.rope_proxy" : "Rope Proxy",
+  "block.betagraphook.grapnel" : "Grapnel Head"
+}

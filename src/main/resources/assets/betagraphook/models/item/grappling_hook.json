@@ -1,0 +1,14 @@
+{
+    "parent": "item/handheld_rod",
+    "textures": {
+        "layer0": "betagraphook:item/grappling_hook"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "grapnel": 1
+            },
+            "model": "betagraphook:item/grappling_hook_cast"
+        }
+    ]
+}

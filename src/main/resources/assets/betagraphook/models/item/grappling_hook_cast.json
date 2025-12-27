@@ -1,0 +1,6 @@
+{
+    "parent": "betagraphook:item/grappling_hook",
+    "textures": {
+        "layer0": "betagraphook:item/grappling_hook_cast"
+    }
+}

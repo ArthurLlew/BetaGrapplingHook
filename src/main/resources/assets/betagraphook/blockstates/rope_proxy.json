@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "betagraphook:block/rope_proxy",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "betagraphook:block/rope_proxy",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "betagraphook:block/rope_proxy"
+    },
+    "facing=east": {
+      "model": "betagraphook:block/rope_proxy",
+      "y": 270
+    }
+  }
+}

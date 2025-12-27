@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,rolled=false": {
+      "model": "betagraphook:block/grapnel",
+      "y": 180
+    },
+    "facing=north,rolled=true": {
+      "model": "betagraphook:block/grapnel_rolled",
+      "y": 180
+    },
+    "facing=west,rolled=false": {
+      "model": "betagraphook:block/grapnel",
+      "y": 90
+    },
+    "facing=west,rolled=true": {
+      "model": "betagraphook:block/grapnel_rolled",
+      "y": 90
+    },
+    "facing=south,rolled=false": {
+      "model": "betagraphook:block/grapnel"
+    },
+    "facing=south,rolled=true": {
+      "model": "betagraphook:block/grapnel_rolled"
+    },
+    "facing=east,rolled=false": {
+      "model": "betagraphook:block/grapnel",
+      "y": 270
+    },
+    "facing=east,rolled=true": {
+      "model": "betagraphook:block/grapnel_rolled",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/thin_block",
+	"ambientocclusion": false,
+	"render_type": "cutout",
+	"textures": {
+		"particle": "betagraphook:block/rope",
+		"texture": "betagraphook:block/rope"
+	},
+	"elements": [
+		{
+			"from": [0, 0.8, 0],
+			"to": [16, 0.8, 1.13],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 0.8, 0]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 1.41], "texture": "#texture"},
+				"down": {"uv": [0, 0, 16, 1.41], "texture": "#texture"}
+			}
+		}
+	]
+}

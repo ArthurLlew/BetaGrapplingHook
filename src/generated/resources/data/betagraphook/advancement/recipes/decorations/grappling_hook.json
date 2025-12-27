@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_grapnel_head": {
+      "conditions": {
+        "items": [
+          {
+            "items": "betagraphook:grapnel_head"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "betagraphook:grappling_hook"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_grapnel_head"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "betagraphook:grappling_hook"
+    ]
+  }
+}
