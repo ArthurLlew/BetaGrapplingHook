@@ -28,6 +28,9 @@ public class BetaGrapplingHookClient {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 
+    /**
+     * Mod setup on client.
+     */
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
         // Register renderer for grappling hook entity
