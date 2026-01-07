@@ -1,13 +1,14 @@
 package net.arthurllew.betagraphook.entity;
 
 import com.mojang.logging.LogUtils;
-import net.arthurllew.betagraphook.attachments.BetaGrapplingHookAttachments;
-import net.arthurllew.betagraphook.block.BetaGrapplingHookBlocks;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookAttachments;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookBlocks;
 import net.arthurllew.betagraphook.block.GrapplingHookBlock;
 import net.arthurllew.betagraphook.block.RopeBlock;
 import net.arthurllew.betagraphook.block.RopeProxyBlock;
 import net.arthurllew.betagraphook.attachments.BetaPlayerAttachment;
-import net.arthurllew.betagraphook.item.BetaGrapplingHookItems;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookEntityTypes;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookItems;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

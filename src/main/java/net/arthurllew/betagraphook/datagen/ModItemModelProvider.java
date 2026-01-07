@@ -1,8 +1,8 @@
 package net.arthurllew.betagraphook.datagen;
 
 import net.arthurllew.betagraphook.BetaGrapplingHook;
-import net.arthurllew.betagraphook.block.BetaGrapplingHookBlocks;
-import net.arthurllew.betagraphook.item.BetaGrapplingHookItems;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookBlocks;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

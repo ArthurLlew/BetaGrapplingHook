@@ -1,7 +1,7 @@
-package net.arthurllew.betagraphook.item;
+package net.arthurllew.betagraphook.registry;
 
 import net.arthurllew.betagraphook.BetaGrapplingHook;
-import net.arthurllew.betagraphook.block.BetaGrapplingHookBlocks;
+import net.arthurllew.betagraphook.item.GrapplingHookItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

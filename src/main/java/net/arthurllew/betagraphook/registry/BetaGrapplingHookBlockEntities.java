@@ -1,7 +1,7 @@
-package net.arthurllew.betagraphook.block.entity;
+package net.arthurllew.betagraphook.registry;
 
 import net.arthurllew.betagraphook.BetaGrapplingHook;
-import net.arthurllew.betagraphook.block.BetaGrapplingHookBlocks;
+import net.arthurllew.betagraphook.block.entity.RopeBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredRegister;

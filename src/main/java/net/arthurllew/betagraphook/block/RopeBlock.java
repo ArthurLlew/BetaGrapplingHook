@@ -1,8 +1,9 @@
 package net.arthurllew.betagraphook.block;
 
-import net.arthurllew.betagraphook.block.entity.BetaGrapplingHookBlockEntities;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookBlockEntities;
 import net.arthurllew.betagraphook.block.entity.RopeBlockEntity;
-import net.arthurllew.betagraphook.item.BetaGrapplingHookItems;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookBlocks;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookItems;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

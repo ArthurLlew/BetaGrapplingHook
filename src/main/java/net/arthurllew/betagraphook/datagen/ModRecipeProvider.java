@@ -1,6 +1,6 @@
 package net.arthurllew.betagraphook.datagen;
 
-import net.arthurllew.betagraphook.item.BetaGrapplingHookItems;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookItems;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

@@ -1,6 +1,7 @@
 package net.arthurllew.betagraphook.block.entity;
 
 import net.arthurllew.betagraphook.block.RopeBlock;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookBlockEntities;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;

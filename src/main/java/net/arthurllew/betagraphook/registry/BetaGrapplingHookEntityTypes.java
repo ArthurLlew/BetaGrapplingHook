@@ -1,6 +1,7 @@
-package net.arthurllew.betagraphook.entity;
+package net.arthurllew.betagraphook.registry;
 
 import net.arthurllew.betagraphook.BetaGrapplingHook;
+import net.arthurllew.betagraphook.entity.GrapplingHookEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;

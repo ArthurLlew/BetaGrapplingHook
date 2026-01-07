@@ -1,6 +1,6 @@
 package net.arthurllew.betagraphook.item;
 
-import net.arthurllew.betagraphook.attachments.BetaGrapplingHookAttachments;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookAttachments;
 import net.arthurllew.betagraphook.entity.GrapplingHookEntity;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.client.multiplayer.ClientLevel;

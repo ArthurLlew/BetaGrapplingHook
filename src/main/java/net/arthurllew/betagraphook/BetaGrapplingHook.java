@@ -1,14 +1,13 @@
 package net.arthurllew.betagraphook;
 
-import net.arthurllew.betagraphook.attachments.BetaGrapplingHookAttachments;
-import net.arthurllew.betagraphook.block.BetaGrapplingHookBlocks;
-import net.arthurllew.betagraphook.block.entity.BetaGrapplingHookBlockEntities;
-import net.arthurllew.betagraphook.entity.BetaGrapplingHookEntityTypes;
-import net.arthurllew.betagraphook.item.BetaGrapplingHookItems;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookAttachments;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookBlocks;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookBlockEntities;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookEntityTypes;
+import net.arthurllew.betagraphook.registry.BetaGrapplingHookItems;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 
 @Mod(BetaGrapplingHook.MODID)
@@ -21,7 +20,7 @@ public class BetaGrapplingHook {
     /**
      * Mod constructor. Performs basic mod init.
      */
-    public BetaGrapplingHook(IEventBus modEventBus, ModContainer modContainer) {
+    public BetaGrapplingHook(IEventBus modEventBus) {
         // Register the commonSetup method for mod loading
         modEventBus.addListener(this::commonSetup);
 

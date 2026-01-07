@@ -1,7 +1,8 @@
-package net.arthurllew.betagraphook.attachments;
+package net.arthurllew.betagraphook.registry;
 
 import com.mojang.serialization.Codec;
 import net.arthurllew.betagraphook.BetaGrapplingHook;
+import net.arthurllew.betagraphook.attachments.BetaPlayerAttachment;
 import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;

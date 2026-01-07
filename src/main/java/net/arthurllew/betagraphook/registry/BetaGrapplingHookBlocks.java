@@ -1,7 +1,9 @@
-package net.arthurllew.betagraphook.block;
+package net.arthurllew.betagraphook.registry;
 
 import net.arthurllew.betagraphook.BetaGrapplingHook;
-import net.arthurllew.betagraphook.item.BetaGrapplingHookItems;
+import net.arthurllew.betagraphook.block.GrapplingHookBlock;
+import net.arthurllew.betagraphook.block.RopeBlock;
+import net.arthurllew.betagraphook.block.RopeProxyBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
