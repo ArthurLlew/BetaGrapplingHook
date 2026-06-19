@@ -17,7 +17,7 @@ public class BetaGrapplingHookEntityTypes {
             DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, BetaGrapplingHook.MODID);
 
     /**
-     * Kaevator's Wallpaper entity type.
+     * Grappling hook entity type.
      */
     public static final Supplier<EntityType<GrapplingHookEntity>> GRAPPLING_HOOK_ENTITY_TYPE =
             ENTITY_TYPES.register("grappling_hook_entity", () ->
