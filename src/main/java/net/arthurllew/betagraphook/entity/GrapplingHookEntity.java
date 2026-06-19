@@ -119,11 +119,6 @@ public class GrapplingHookEntity extends Projectile {
     }
 
     /**
-     * Defines entity data for synchronization.
-     */
-    protected void defineSynchedData() {}
-
-    /**
      * @return entity movement emission (none for this kind of entity).
      */
     protected Entity.MovementEmission getMovementEmission() {
@@ -140,7 +135,8 @@ public class GrapplingHookEntity extends Projectile {
     /**
      * @return whether this entity can move between dimensions.
      */
-    public boolean canChangeDimensions() {
+    @Override
+    public boolean canChangeDimensions(Level oldLevel, Level newLevel) {
         return false;
     }
 
