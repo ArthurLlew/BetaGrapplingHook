@@ -74,17 +74,12 @@ public class RopeBlock extends Block implements SimpleWaterloggedBlock, EntityBl
      */
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        switch (state.getValue(FACING)) {
-            case NORTH:
-                return NORTH_AABB;
-            case SOUTH:
-                return SOUTH_AABB;
-            case WEST:
-                return WEST_AABB;
-            case EAST:
-            default:
-                return EAST_AABB;
-        }
+        return switch (state.getValue(FACING)) {
+            case NORTH -> NORTH_AABB;
+            case SOUTH -> SOUTH_AABB;
+            case WEST -> WEST_AABB;
+            default -> EAST_AABB;
+        };
     }
 
     /**
@@ -179,7 +174,7 @@ public class RopeBlock extends Block implements SimpleWaterloggedBlock, EntityBl
         BlockState block = level.getBlockState(movablePos);
         if (block.is(BetaGrapplingHookBlocks.ROPE_PROXY.get())) {
             // Replace it with water or air
-            BetaGrapplingHookBlockUtils.replaceWithWaterOrAir(level, movablePos, block);
+            this.replaceWithWaterOrAir(level, movablePos, block);
 
             // Move towards grappling hook
             movablePos.move(state.getValue(FACING).getOpposite());
@@ -188,7 +183,7 @@ public class RopeBlock extends Block implements SimpleWaterloggedBlock, EntityBl
             block = level.getBlockState(movablePos);
             if (block.is(BetaGrapplingHookBlocks.GRAPNEL.get())) {
                 // Replace it with water or air
-                BetaGrapplingHookBlockUtils.replaceWithWaterOrAir(level, movablePos, block);
+                this.replaceWithWaterOrAir(level, movablePos, block);
             }
         }
     }
@@ -205,7 +200,7 @@ public class RopeBlock extends Block implements SimpleWaterloggedBlock, EntityBl
         BlockState block = level.getBlockState(movablePos);
         while (block.is(this)) {
             // Replace with water or air
-            BetaGrapplingHookBlockUtils.replaceWithWaterOrAir(level, movablePos, block);
+            this.replaceWithWaterOrAir(level, movablePos, block);
 
             // Get next block
             movablePos.move(Direction.UP);
@@ -217,27 +212,43 @@ public class RopeBlock extends Block implements SimpleWaterloggedBlock, EntityBl
     }
 
     /**
+     * Replaces given block with water or air depending on its state.
+     */
+    private void replaceWithWaterOrAir(LevelAccessor level, BlockPos pos, BlockState state) {
+        // Try tp replace block with water or air
+        try {
+            level.setBlock(pos, state.getValue(BlockStateProperties.WATERLOGGED)
+                    ? Blocks.WATER.defaultBlockState() : Blocks.AIR.defaultBlockState(), 3);
+        }
+        // If there is no waterlogged property
+        catch (IllegalArgumentException e) {
+            // Replace with air anyway
+            level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
+        }
+    }
+
+    /**
      * @return rotated block.
      */
     @Override
-    public BlockState rotate(BlockState pState, Rotation pRotation) {
-        return pState.setValue(FACING, pRotation.rotate(pState.getValue(FACING)));
+    public BlockState rotate(BlockState state, Rotation rot) {
+        return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
     }
 
     /**
      * @return mirrored block.
      */
     @Override
-    public BlockState mirror(BlockState pState, Mirror pMirror) {
-        return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
+    public BlockState mirror(BlockState state, Mirror mirror) {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
     }
 
     /**
      * @return block fluid state.
      */
     @Override
-    public FluidState getFluidState(BlockState pState) {
-        return pState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(pState);
+    public FluidState getFluidState(BlockState state) {
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
     /**

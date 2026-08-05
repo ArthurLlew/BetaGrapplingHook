@@ -2,14 +2,18 @@ package net.arthurllew.betagraphook.datagen;
 
 import net.arthurllew.betagraphook.registry.BetaGrapplingHookBlocks;
 import net.arthurllew.betagraphook.registry.BetaGrapplingHookItems;
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
 
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Set;
 
+@MethodsReturnNonnullByDefault
+@ParametersAreNonnullByDefault
 public class ModBlockLootTables extends BlockLootSubProvider {
     protected ModBlockLootTables(HolderLookup.Provider registries) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
